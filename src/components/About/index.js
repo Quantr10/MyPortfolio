@@ -5,7 +5,7 @@ import me from "../../assets/me.jpg"
 const About = () => {
   return (
     <section id="about" className="about">
-        <h2>About me</h2>
+        <h2>About Me</h2>
         <div className="about-elements">
             <div className="about-text">
                 <p>I am an undergraduate at DePauw University, majoring in Computer Science and Business Analytics. Originally from Vietnam, I am currently based in Greencastle, Indiana, where I continuously refine my technical skills and explore innovative solutions in the tech space. </p>

@@ -13,7 +13,7 @@ const Intro = () => {
         const timeout = setTimeout(() => {
             setDisplayedText((prev) => prev + phrases[currentPhraseIndex][charIndex]);
             setCharIndex((prev) => prev + 1);
-        }, 200);
+        }, 150);
         return () => clearTimeout(timeout);
       } 
       else {
@@ -21,7 +21,7 @@ const Intro = () => {
             setDisplayedText('');
             setCharIndex(0);
             setCurrentPhraseIndex((prev) => (prev + 1) % phrases.length);
-        }, 4000);
+        }, 2000);
         return () => clearTimeout(nextPhraseTimeout);
       }
   }, [charIndex, currentPhraseIndex, phrases]);

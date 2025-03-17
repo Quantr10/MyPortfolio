@@ -67,7 +67,7 @@ const Projects = () => {
             title: "Pawrides",
             type: "Web application",
             description: "A website that enables real-time ride booking with ride tracking, trip history management features; utilizing Firebase for real-time database management and user authentication, delivering a student-focused solution.",
-            link1: "",
+            link1: "https://pawrides.vercel.app/homepage/index.html",
             link2: "https://github.com/Quantr10/Pawrides",
             images: [pic1,pic2,pic3,pic4]
           },

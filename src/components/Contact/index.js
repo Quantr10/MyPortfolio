@@ -20,7 +20,7 @@ const Contact = () => {
                 </a>
             </div>
             <div className = "contact-button">
-                <a href="https://drive.google.com/file/d/1AHpTqrKRqdMSpMeDf7pjyCaV09wwmk5n/view?usp=sharing" target="_blank"  rel="noreferrer">
+                <a href="https://drive.google.com/file/d/1Boh_u1Z9fRMMQIJe2eD8kVt65L3YLpyl/view?usp=sharing" target="_blank"  rel="noreferrer">
                     <span className="icon"><IoDocumentText /></span>Resume
                 </a>
             </div>
