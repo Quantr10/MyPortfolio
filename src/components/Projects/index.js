@@ -6,6 +6,9 @@ import pic1 from "../../assets/1.png"
 import pic2 from "../../assets/2.png"
 import pic3 from "../../assets/3.png"
 import pic4 from "../../assets/4.png"
+import pic5 from "../../assets/5.png"
+import pic6 from "../../assets/6.png"
+import pic7 from "../../assets/7.png"
 
 const ProjectSlider = ({ images }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -74,7 +77,7 @@ const Projects = () => {
             description: "A modern Snake game developed in C++ using Raylib, featuring enhanced graphics and updated mechanics. Utilized advanced data structures like Double-Ended Queue and Priority Queue to optimize power-ups, dynamic obstacles, and level progression.",
             link1: "",
             link2: "https://github.com/Quantr10/Ouroborus",
-            images: [pic1,pic2,pic3] 
+            images: [pic5,pic6,pic7] 
           }
         ].map((project) => (
           <div className="project">
