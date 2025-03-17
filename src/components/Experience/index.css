@@ -1,0 +1,74 @@
+.experience-list {
+    padding: 20px;
+    padding-top: 40px;
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+.experience-list h2 {
+    font-size: 2.5rem;
+    margin: 20px;
+    margin-bottom: 40px;
+    color: lightblue;
+}
+
+.experience-list-elements {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.experience {
+    border-radius: 0px 10px 10px 0px;
+    border-left: 5px solid lightblue;
+    transition: transform 0.3s ease, color 0.3s ease;
+    margin: 0 auto;
+    max-width: 1000px;
+    padding: 0px 40px;
+}
+
+.experience-header {
+    align-items: center;
+}
+
+.experience-text, .experience-header {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    font-size: 1rem;
+    text-align: justify;
+    color: #ccc;
+}
+
+p {
+    margin: 0px;
+    line-height: 1.9;
+}
+
+.job-title {
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+.job-time {
+    font-style: italic;
+}
+
+.experience:hover {
+    transform: translateX(10px);
+}
+
+.experience:hover .job-title,
+.experience:hover .job-location {
+    color: lightblue;
+}
+
+.experience:hover .experience-text {
+    color: white;
+}
+
+.job-description ul{
+    margin: 5px auto;
+}
