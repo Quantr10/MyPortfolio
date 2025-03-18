@@ -43,23 +43,22 @@ const ProjectText = ({title, type, description, link1, link2}) => {
     <div className="project-text">
       <p className="project-title">{title}</p>
       <p className="project-type">{type}</p>
-      <p className="project-description">{description}</p>
-
-        <div className="project-button">
-          <a href={link1} target="_blank" rel="noreferrer">
-            <span><FaShareSquare /></span>Live
-          </a>
-          <a href={link2} target="_blank" rel="noreferrer">
-            <span><FaMagnifyingGlass/></span>Learn more
-          </a>
-        </div>
+      <p>{description}</p>
+      <div className="project-button">
+        <a href={link1} target="_blank" rel="noreferrer">
+          <span className="icon"><FaShareSquare /></span>Live
+        </a>
+        <a href={link2} target="_blank" rel="noreferrer">
+          <span className="icon"><FaMagnifyingGlass/></span>Learn more
+        </a>
+      </div>
     </div>
   )
 }
 
 const Projects = () => {  
   return (
-    <section className="projects" id="projects">
+    <section id="projects">
       <h2>Projects</h2>
       <div className="projects-list">
         {[

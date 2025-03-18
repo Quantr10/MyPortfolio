@@ -7,7 +7,7 @@ import "./index.css";
 
 const Contact = () => {
   return (
-    <section className = "contact">
+    <section>
         <div className = "contact-method">
             <div className = "contact-button">
                 <a href="http://linkedin.com/in/thequantran" target="_blank"  rel="noreferrer">

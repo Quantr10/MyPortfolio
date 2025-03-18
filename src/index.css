@@ -5,4 +5,51 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: var(--color-black);
+  color: var(--color-white);
+}
+
+:root {
+  --color-lightgrey: #ccc;
+  --color-black: black;
+  --color-white: white;
+  --color-lightblue: rgb(141, 210, 233);
+  --transform-smaller: scale(0.98);
+  --transform-bigger: scale(1.05);
+  --transition-transform-color: transform 0.3s ease, color 0.3s ease;
+  --transform-move-right: translateX(10px);
+
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+section {
+  padding: 40px 20px;
+  padding-bottom: 10px;
+  text-align: center;
+  background-color: var(--color-black);
+}
+
+h2 {
+  font-size: 2.5rem;
+  margin: 20px;
+  margin-bottom: 40px;
+  color: var(--color-lightblue);
+}
+
+p {
+  transition: color 0.3s ease;
+  margin: 0px;
+  line-height: 1.9;
+  font-size: 1rem;
+  color: var(--color-lightgrey);
+}
+
+a {
+  gap: 8px;
+  padding: 10px 20px;
+  text-decoration: none;
+  color: var(--color-white);
 }

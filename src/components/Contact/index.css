@@ -1,6 +1,8 @@
-.contact-button {
-    margin: 6px;
-    margin-top: 10px;
+.contact-method {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
 .contact-button a {
@@ -11,23 +13,14 @@
     padding: 10px 20px;
     border-radius: 10px;
     text-decoration: none;
-    color: inherit;
-    background-color: black;
-    transition: background-color 0.3s ease, filter 0.3s ease;
+    background-color: var(--color-black);
+    transition: var(--transition-transform-color);
 }
 
 .contact-button a:hover {
-    color: lightblue;
-    transform: scale(1.05);
-    cursor: pointer;
-}
-
-.contact-method {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 15px;
-    flex-wrap: wrap;
+    color: var(--color-lightblue);
+    transform: var(--transform-bigger);
+    transition: var(--transition-transform-color);
 }
 
 .icon {

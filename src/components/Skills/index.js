@@ -19,6 +19,7 @@ import rcode from '../../assets/rcode.png'
 import typescript from '../../assets/typescript.png'
 import postgresql from '../../assets/postgresql.png'
 import tailwind from '../../assets/tailwind.png'
+import mysql from '../../assets/mysql.png'
 
 const skills = [
   { image: java, name: "Java" },
@@ -36,6 +37,7 @@ const skills = [
   { image: tailwind, name: "Tailwind"},
   { image: firebase, name: "Firebase" },
   { image: mongodb, name: "MongoDB" },
+  { image: mysql, name: "MySQL"},
   { image: postgresql, name: "PostgreSQL"},
   { image: tableau, name: "Tableau"},
   { image: rcode, name: "RCode"},
@@ -44,7 +46,7 @@ const skills = [
 
 const Skills = () => {
     return (
-      <section id="skills" className="skills">
+      <section id="skills">
         <h2>Technical Skills</h2>
         <div className="skills-section">
           {skills.map((skill, index) => (

@@ -4,7 +4,7 @@ import me from "../../assets/me.jpg"
 
 const About = () => {
   return (
-    <section id="about" className="about">
+    <section id="about">
         <h2>About Me</h2>
         <div className="about-elements">
             <div className="about-text">

@@ -27,9 +27,9 @@ const Intro = () => {
   }, [charIndex, currentPhraseIndex, phrases]);
 
   return (
-      <section id="intro" className="intro">
+      <section id="intro">
           <div className="intro-image">
-              <img src={logo1} alt="Profile" className="image" />
+              <img src={logo1} alt="Profile" />
           </div>
           <div className="intro-text">
               <h1>Hi! I am</h1>

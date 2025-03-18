@@ -15,7 +15,7 @@ const NavBar = () => {
 
   return (
     <section className="navbar">
-      <div className="hamburger" onClick={toggleMenu}>
+      <div className="navbar-icon" onClick={toggleMenu}>
         {isOpen ? <FaTimes /> : <FaBars />}
       </div>
 
