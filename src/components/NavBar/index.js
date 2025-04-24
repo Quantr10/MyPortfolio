@@ -22,7 +22,7 @@ const NavBar = () => {
       <div className={`navbar-links ${isOpen ? 'active' : ''}`}>
         <a href="#" onClick={closeMenu}>Home</a>
         <a href="#about" onClick={closeMenu}>About</a>
-        <a href="#experience-list" onClick={closeMenu}>Experience</a>
+        <a href="#experience" onClick={closeMenu}>Experience</a>
         <a href="#projects" onClick={closeMenu}>Projects</a>
         <a href="#skills" onClick={closeMenu}>Skills</a>
       </div>
