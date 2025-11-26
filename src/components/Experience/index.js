@@ -1,55 +1,54 @@
-import React from 'react';
+import React from "react";
 import "./index.css";
 
-const ExperienceText = ({ job, company, time, location, description }) => {
-    return (
-        <div>
-            <div className="experience-header">
-                <p className="job-title">{job} - {company}</p>
-                <p>{location}</p>
-            </div>
-            <div className="experience-text">
-                <p className="job-time">{time}</p>
-            </div>
-            <div className="experience-text">
-                <p className="job-description">{description}</p>
-            </div>
-        </div>
-    );
+const ExperienceText = ({ job, company, time, description }) => {
+  return (
+    <div className="experience">
+      <h3 className="company-name exp-line">{company}</h3>
+
+      <div className="exp-row-2 exp-line">
+        <p className="job-title">{job}</p>
+        <p className="job-time-pill">{time}</p>
+      </div>
+    </div>
+  );
 };
 
 const ExperienceList = () => {
-    return (
-        <section id="experience">
-            <h2>Experience</h2>
-            <div className="experience-list">
-                {[
-                    {
-                        job: "Computer Science Lab Tutor",
-                        company: "DePauw’s Computer Science Department",
-                        time: "August 2024 - Present",
-                        location: "Greencastle, IN",
-                        description: 
-                        <ul>
-                            <li>Guided 50 students during lab sessions, providing hands-on assistance with Java coding exercises and project development, fostering stronger programming skills.</li>
-                            <li>Conducted night tutoring sessions, leading to a significant improvement in students' Java programming and debugging skills, with an average 25% increase in grades.</li>
-                            <li>Collaborated with faculty to develop supplemental learning materials and tailored assistance for diverse student learning needs, enhancing overall comprehension and engagement in Java programming.</li>
-                        </ul>
-                    }
-                ].map((experience) => (
-                    <div className="experience">
-                        <ExperienceText
-                            job={experience.job}
-                            company={experience.company}
-                            time={experience.time}
-                            location={experience.location}
-                            description={experience.description} 
-                        />
-                    </div>
-                ))}
-            </div>
-        </section>
-    );
+  const experiences = [
+    {
+      job: "Software Engineer Intern",
+      company: "IMT SOLUTIONS",
+      time: "May 2025 – Aug 2025",
+    },
+    {
+      job: "Full-Stack Developer Intern",
+      company: "AIGLOW.EDU",
+      time: "Jan 2025 – Apr 2025",
+    },
+    {
+      job: "Computer Science Lab Tutor",
+      company: "DEPAUW COMPUTER SCIENCE DEPARTMENT",
+      time: "August 2023 – Present",
+    },
+  ];
+
+  return (
+    <section id="experience" className="experience-wrapper">
+      <div className="experience-left">
+        {experiences.map((exp, idx) => (
+          <ExperienceText key={idx} {...exp} />
+        ))}
+      </div>
+
+      <div className="experience-right">
+        <h1 className="sticky-title">
+          WORK <br />
+          <div className="experience-line">EXPERIENCE</div>
+        </h1>
+      </div>
+    </section>
+  );
 };
 
 export default ExperienceList;

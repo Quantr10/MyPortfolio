@@ -1,53 +1,159 @@
+.experience-wrapper {
+  display: flex;
+  gap: var(--space-xl);
+  padding: var(--section-padding) var(--container-padding);
+}
+
+.experience-left {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xl);
+}
+
+.experience-right {
+  width: 40%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  position: relative;
+}
+
+.sticky-title {
+  position: sticky;
+  top: 120px;
+  font-size: var(--font-xxl);
+  font-weight: var(--font-heavy);
+  line-height: var(--font-xxl);
+  color: var(--color-lightgrey);
+  text-align: right;
+  user-select: none;
+  margin: 0;
+  padding: 0;
+}
+
+.experience-line {
+  color: var(--color-grey);
+}
+
 .experience {
-    border-left: 5px solid lightblue;
-    transition: var(--transition-transform-color);
-    margin: 0 auto;
-    max-width: 1000px;
-    padding: 0px 40px;
-}
-
-.experience-text, .experience-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    font-size: 1rem;
-    text-align: justify;
-    color: #ccc;
-}
-
-.job-title {
-    font-size: 1.3rem;
-    font-weight: bold;
-}
-
-.job-time {
-    font-style: italic;
-}
-
-.job-description ul{
-    margin: 5px auto;
-}
-
-.experience-list {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    gap: 50px;
+  transition: transform var(--transition-normal);
 }
 
 .experience:hover {
-    transform: var(--transform-move-right);
-    transition: var(--transition-transform-color);
+  transform: var(--transform-move-right);
+}
+
+.job-title {
+  font-size: 1rem;
+  margin-bottom: var(--space-xxs);
+  text-align: left;
 }
 
 .experience:hover .job-title {
-    color: var(--color-lightblue);
-    transition: var(--transition-transform-color);
+  color: var(--color-white);
 }
 
-.experience:hover p {
-    color: var(--color-white);
-    transition: var(--transition-transform-color);
+.company-name {
+  font-size: 3rem;
+  font-weight: var(--font-heavy);
+  color: var(--color-lightblue);
+  margin: 0;
+  text-align: left;
 }
 
+.job-time {
+  font-size: var(--font-sm);
+  font-style: italic;
+  color: var(--color-lightgrey);
+  margin-bottom: var(--space-sm);
+  text-align: left;
+}
+
+.experience:hover .exp-line {
+  color: var(--color-white);
+  transition: color var(--transition-normal);
+  transition-delay: calc(var(--i, 0) * 0.12s);
+}
+
+.exp-row-2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.job-time-pill {
+  position: relative;
+  width: auto;
+  height: 36px;
+  padding: 0 12px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 0.9rem;
+  font-weight: var(--font-heavy);
+
+  background: var(--color-grey);
+  color: var(--color-lightblue);
+
+  border: none;
+  white-space: nowrap;
+  overflow: hidden;
+  pointer-events: none;
+  text-transform: uppercase;
+}
+
+@media (max-width: 1200px) {
+  .experience-wrapper {
+    padding: 80px 60px;
+  }
+
+  .experience-left {
+    width: 55%;
+  }
+  .experience-right {
+    width: 45%;
+  }
+
+  .company-name {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .experience-wrapper {
+    padding: 60px 30px;
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .experience-right {
+    order: -1;
+    width: 100%;
+    position: static;
+    justify-content: flex-start;
+    text-align: left;
+  }
+
+  .sticky-title {
+    text-align: left;
+  }
+
+  .experience-left {
+    width: 100%;
+    gap: 40px;
+  }
+
+  .exp-row-2 {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+  }
+}
+
+@media (max-width: 700px) {
+}

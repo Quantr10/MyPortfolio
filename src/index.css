@@ -1,24 +1,112 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  background-color: var(--color-black);
-  color: var(--color-white);
-}
-
+/* =========================================================
+   GLOBAL THEME VARIABLES — FULL DESIGN SYSTEM
+========================================================= */
 :root {
-  --color-lightgrey: #ccc;
-  --color-black: black;
-  --color-white: white;
-  --color-lightblue: rgb(141, 210, 233);
+  /* -------------------------
+     COLORS
+  ------------------------- */
+  --color-black: #000000;
+  --color-darkgrey: #1a1a1a;
+  --color-grey: #3b3b3b;
+  --color-lightgrey: #b0b0b0;
+  --color-white: #ffffff;
+  --color-lightblue: #b8ddff;
+
+  /* Optional accent theme (can expand later) */
+  --color-accent: var(--color-lightblue);
+
+  /* -------------------------
+     TYPOGRAPHY
+  ------------------------- */
+  --font-base: 1rem;
+  --font-sm: 0.9rem;
+  --font-md: 1.1rem;
+  --font-lg: 1.4rem;
+  --font-xl: 2rem;
+  --font-xxl: 4rem;
+  --font-heavy: 800;
+
+  /* -------------------------
+     SPACING SCALE (8px system)
+  ------------------------- */
+  --space-xxs: 4px;
+  --space-xs: 8px;
+  --space-sm: 12px;
+  --space-md: 20px;
+  --space-lg: 40px;
+  --space-xl: 60px;
+  --space-xxl: 100px;
+
+  /* Section & page layout */
+  --section-padding: 100px;
+  --section-padding-mobile: 60px;
+
+  /* Container widths */
+  --container-padding: 150px;
+  --container-padding-mobile: 30px;
+
+  /* -------------------------
+     TRANSFORMS
+  ------------------------- */
   --transform-smaller: scale(0.98);
   --transform-bigger: scale(1.05);
-  --transition-transform-color: transform 0.3s ease, color 0.3s ease;
   --transform-move-right: translateX(10px);
+  --transform-move-up: translateY(-8px);
 
+  /* -------------------------
+     TRANSITIONS
+  ------------------------- */
+  --transition-fast: 0.2s ease;
+  --transition-normal: 0.3s ease;
+  --transition-slow: 0.6s ease;
+
+  --transition-transform-color: transform 0.3s ease, color 0.3s ease;
+  --transition-base: color var(--transition-normal),
+    background var(--transition-normal), transform var(--transition-normal);
+
+  /* -------------------------
+     RADIUS
+  ------------------------- */
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --radius-round: 50%;
+
+  /* -------------------------
+     SHADOWS
+  ------------------------- */
+  --shadow-soft: 0 4px 12px rgba(0, 0, 0, 0.2);
+  --shadow-strong: 0 8px 24px rgba(0, 0, 0, 0.35);
+
+  /* -------------------------
+     Z-INDEX
+  ------------------------- */
+  --z-back: -1;
+  --z-base: 1;
+  --z-nav: 1000;
+  --z-overlay: 1500;
+  --z-modal: 2000;
+
+  /* -------------------------
+     BREAKPOINTS
+  ------------------------- */
+  --bp-mobile: 900px;
+}
+
+/* =========================================================
+   GLOBAL TAG ELEMENTS
+========================================================= */
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  background-color: var(--color-black);
+  color: var(--color-white);
+  font-size: var(--font-base);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 html {
@@ -26,30 +114,39 @@ html {
 }
 
 section {
-  padding: 40px 20px;
-  padding-bottom: 10px;
-  text-align: center;
+  padding: var(--section-padding) var(--container-padding);
+  padding-bottom: var(--space-sm);
   background-color: var(--color-black);
+  text-align: center;
+}
+
+@media (max-width: var(--bp-mobile)) {
+  section {
+    padding: var(--section-padding-mobile) var(--container-padding-mobile);
+  }
 }
 
 h2 {
   font-size: 2.5rem;
-  margin: 20px;
-  margin-bottom: 40px;
+  margin: var(--space-md) 0 var(--space-lg);
   color: var(--color-lightblue);
+  font-weight: var(--font-heavy);
 }
 
 p {
-  transition: color 0.3s ease;
-  margin: 0px;
+  margin: 0;
   line-height: 1.9;
-  font-size: 1rem;
+  font-size: var(--font-base);
   color: var(--color-lightgrey);
+  transition: color var(--transition-normal);
 }
 
 a {
-  gap: 8px;
-  padding: 10px 20px;
   text-decoration: none;
   color: var(--color-white);
+  padding: var(--space-xs) var(--space-md);
+  display: inline-flex;
+  gap: var(--space-xs);
+  align-items: center;
+  transition: var(--transition-transform-color);
 }
