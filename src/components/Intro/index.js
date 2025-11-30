@@ -15,30 +15,22 @@ const Intro = () => {
 
   return (
     <section id="intro">
-      <div className="background-text">
-        <div>
-          <span className="faded">QUAN</span>
-          <span className="normal">TRAN</span>
-        </div>
-        <div>
-          <span className="faded">QUAN</span>
-          <span className="normal">TRAN</span>
-        </div>
-        <div>
-          <span className="faded">QUAN</span>
-          <span className="normal">TRAN</span>
-        </div>
-      </div>
+  <div className="intro-wrapper">
+    <div className="background-text">
+      <div><span className="faded">QUAN</span><span className="normal">TRAN</span></div>
+      <div><span className="faded">QUAN</span><span className="normal">TRAN</span></div>
+      <div><span className="faded">QUAN</span><span className="normal">TRAN</span></div>
+    </div>
 
-      <div className="intro-center">
-        <img
-          src={logo1}
-          alt="Profile"
-          className="intro-logo"
-          style={{ transform: `rotate(${rotateDeg}deg)` }}
-        />
-      </div>
-    </section>
+    <img
+      src={logo1}
+      alt="Profile"
+      className="intro-logo"
+      style={{ transform: `rotate(${rotateDeg}deg)` }}
+    />
+  </div>
+</section>
+
   );
 };
 
