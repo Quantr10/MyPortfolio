@@ -1,5 +1,5 @@
 .navbar {
-  padding: var(--space-sm) var(--container-padding-mobile);
+  padding: 10px 30px;
   position: sticky;
   top: 0;
   z-index: var(--z-nav);
@@ -93,7 +93,6 @@
 @media (max-width: 900px) {
   .navbar {
     justify-content: space-between;
-    padding: 20px;
   }
 
   .navbar-icon {
@@ -112,7 +111,7 @@
     flex-direction: column;
     gap: 0px;
 
-    width: 15%;
+    width: 20%;
     height: 100vh;
 
     background: black;

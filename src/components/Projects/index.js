@@ -99,18 +99,22 @@ const projectData = [
 
 const Projects = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [slideIndex, setSlideIndex] = useState(0);
   const [isMobile, setIsMobile] = useState(window.innerWidth < 900);
+
+  // NEW: separate slide index for each project
+  const [slideIndexes, setSlideIndexes] = useState(
+    projectData.map(() => 0)
+  );
 
   const sectionsRef = useRef([]);
 
   useEffect(() => {
     const handleResize = () => setIsMobile(window.innerWidth < 900);
     window.addEventListener("resize", handleResize);
-
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
+  // DESKTOP scroll snap logic
   useEffect(() => {
     if (isMobile) return;
 
@@ -133,7 +137,9 @@ const Projects = () => {
       });
 
       setCurrentIndex(closestIndex);
-      setSlideIndex(0);
+
+      // reset slideshow when project changes on desktop
+      setSlideIndexes(projectData.map(() => 0));
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -142,20 +148,28 @@ const Projects = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, [isMobile]);
 
+  // NEW: independent next/prev handlers
+  const nextSlide = (projIndex, totalImages) => {
+    setSlideIndexes((prev) => {
+      const updated = [...prev];
+      updated[projIndex] =
+        updated[projIndex] === totalImages - 1 ? 0 : updated[projIndex] + 1;
+      return updated;
+    });
+  };
+
+  const prevSlide = (projIndex, totalImages) => {
+    setSlideIndexes((prev) => {
+      const updated = [...prev];
+      updated[projIndex] =
+        updated[projIndex] === 0 ? totalImages - 1 : updated[projIndex] - 1;
+      return updated;
+    });
+  };
+
   const current = projectData[currentIndex];
 
-  const nextSlide = () => {
-    setSlideIndex((prev) =>
-      prev === current.images.length - 1 ? 0 : prev + 1
-    );
-  };
-
-  const prevSlide = () => {
-    setSlideIndex((prev) =>
-      prev === 0 ? current.images.length - 1 : prev - 1
-    );
-  };
-
+  /* ---------------------------- MOBILE RENDER ---------------------------- */
   if (isMobile) {
     return (
       <section id="projects" className="scroll-projects mobile">
@@ -186,7 +200,11 @@ const Projects = () => {
             <div className="slideshow-container mobile-slideshow">
               <div
                 className="slide-track"
-                style={{ transform: `translateX(-${slideIndex * 100}%)` }}
+                style={{
+                  transform: `translateX(-${
+                    slideIndexes[i] * 100
+                  }%)`,
+                }}
               >
                 {p.images.map((img, idx) => (
                   <img key={idx} className="slide-image" src={img} alt="" />
@@ -195,38 +213,28 @@ const Projects = () => {
 
               <button
                 className="slider-btn mobile-btn left"
-                onClick={prevSlide}
+                onClick={() => prevSlide(i, p.images.length)}
               >
                 <FaChevronLeft />
               </button>
 
               <button
                 className="slider-btn mobile-btn right"
-                onClick={nextSlide}
+                onClick={() => nextSlide(i, p.images.length)}
               >
                 <FaChevronRight />
               </button>
             </div>
 
             <div className="links-left">
-              <a
-                href={p.link}
-                target="_blank"
-                className="slide-link"
-                data-hover="LIVE"
-              >
+              <a href={p.link} target="_blank" className="slide-link" data-hover="LIVE">
                 <div className="slide-content">
                   <span className="link-text">LIVE</span>
                   <FiExternalLink className="link-icon" />
                 </div>
               </a>
 
-              <a
-                href={p.github}
-                target="_blank"
-                className="slide-link"
-                data-hover="GITHUB"
-              >
+              <a href={p.github} target="_blank" className="slide-link" data-hover="GITHUB">
                 <div className="slide-content">
                   <span className="link-text">GITHUB</span>
                   <FaGithub className="link-icon" />
@@ -238,6 +246,8 @@ const Projects = () => {
       </section>
     );
   }
+
+  /* ----------------------------- DESKTOP RENDER ----------------------------- */
 
   return (
     <section id="projects" className="scroll-projects">
@@ -299,25 +309,38 @@ const Projects = () => {
         {projectData.map((p, i) => (
           <section
             key={i}
-            data-index={i}
-            className="project-slide"
             ref={(el) => (sectionsRef.current[i] = el)}
+            className="project-slide"
           >
             <div className="slideshow-container">
               <div
                 className="slide-track"
-                style={{ transform: `translateX(-${slideIndex * 100}%)` }}
+                style={{
+                  transform: `translateX(-${
+                    slideIndexes[currentIndex] * 100
+                  }%)`,
+                }}
               >
                 {p.images.map((img, idx) => (
                   <img key={idx} className="slide-image" src={img} alt="" />
                 ))}
               </div>
 
-              <button className="slider-btn left" onClick={prevSlide}>
+              <button
+                className="slider-btn left"
+                onClick={() =>
+                  prevSlide(currentIndex, current.images.length)
+                }
+              >
                 <FaChevronLeft />
               </button>
 
-              <button className="slider-btn right" onClick={nextSlide}>
+              <button
+                className="slider-btn right"
+                onClick={() =>
+                  nextSlide(currentIndex, current.images.length)
+                }
+              >
                 <FaChevronRight />
               </button>
             </div>

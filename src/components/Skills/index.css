@@ -12,7 +12,7 @@
 
 .skills-main-title {
   font-size: 4rem;
-  font-weight: 800;
+  font-weight: var(--font-heavy);
   line-height: 4rem;
   color: var(--color-grey);
   margin-bottom: 40px;
@@ -29,7 +29,7 @@
 .skill-title {
   flex: 0 0 350px;
   font-size: 3rem;
-  font-weight: 800;
+  font-weight: var(--font-heavy);
   color: var(--color-lightgrey);
   text-align: left;
   transition: transform 0.3s ease, color 0.3s ease;

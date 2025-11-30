@@ -18,6 +18,11 @@ const ExperienceList = () => {
   const experiences = [
     {
       job: "Software Engineer Intern",
+      company: "IPSERLAB",
+      time: "Sep 2025 – Dec 2025",
+    },
+    {
+      job: "Software Engineer Intern",
       company: "IMT SOLUTIONS",
       time: "May 2025 – Aug 2025",
     },

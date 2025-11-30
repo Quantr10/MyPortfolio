@@ -73,7 +73,7 @@
 .experience:hover .exp-line {
   color: var(--color-white);
   transition: color var(--transition-normal);
-  transition-delay: calc(var(--i, 0) * 0.12s);
+  transition-delay: calc(var(--i, 0) * 0.3s);
 }
 
 .exp-row-2 {
