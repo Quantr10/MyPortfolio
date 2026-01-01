@@ -24,12 +24,12 @@ const tech = {
     { icon: "devicon-express-original", name: "Express.js" },
     { icon: "devicon-tailwindcss-plain colored", name: "Tailwind CSS" },
     { icon: "devicon-bootstrap-plain colored", name: "Bootstrap" },
-    { icon: "devicon-firebase-plain colored", name: "Firebase" },
     { icon: "devicon-spring-plain colored", name: "Spring" },
     { icon: "devicon-flutter-plain colored", name: "Flutter" },
   ],
-
+  
   database: [
+    { icon: "devicon-firebase-plain colored", name: "Firebase" },
     { icon: "devicon-mongodb-plain colored", name: "MongoDB" },
     { icon: "devicon-mysql-plain colored", name: "MySQL" },
     { icon: "devicon-postgresql-plain colored", name: "PostgreSQL" },
@@ -38,13 +38,14 @@ const tech = {
   tools: [
     { icon: "devicon-docker-plain colored", name: "Docker" },
     { icon: "devicon-git-plain colored", name: "Git" },
+    { icon: "devicon-github-plain colored", name: "GitHub" },
     { icon: "devicon-amazonwebservices-plain-wordmark colored", name: "AWS" },
     { icon: "devicon-azure-plain colored", name: "Azure" },
     { icon: "devicon-googlecloud-plain colored", name: "Google Cloud" },
     { icon: "devicon-kubernetes-plain colored", name: "Kubernetes" },
     { icon: "devicon-vscode-plain colored", name: "VS Code" },
     { icon: "devicon-androidstudio-plain colored", name: "Android Studio" },
-    { icon: "devicon-powershell-plain colored", name: "PowerShell" },
+    { icon: "devicon-postman-plain colored", name: "Postman" },
   ],
 };
 

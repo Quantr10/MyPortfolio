@@ -17,6 +17,11 @@ const ExperienceText = ({ job, company, time, description }) => {
 const ExperienceList = () => {
   const experiences = [
     {
+      job: "Incoming Software Engineer Intern",
+      company: "MICROSOFT",
+      time: "May 2026",
+    },
+    {
       job: "Software Engineer Intern",
       company: "IPSERLAB",
       time: "Sep 2025 – Dec 2025",

@@ -25,6 +25,15 @@ import pic22 from "../../assets/22.png";
 import pic23 from "../../assets/23.png";
 import pic24 from "../../assets/24.png";
 import pic25 from "../../assets/25.png";
+import pic26 from "../../assets/26.png";
+import pic27 from "../../assets/27.png";
+import pic28 from "../../assets/28.png";
+import pic29 from "../../assets/29.png";
+import pic30 from "../../assets/30.png";
+import pic31 from "../../assets/31.png";
+import pic32 from "../../assets/32.png";
+import pic33 from "../../assets/33.png";
+
 
 import { FiExternalLink } from "react-icons/fi";
 import { FaGithub } from "react-icons/fa";
@@ -35,11 +44,23 @@ const projectData = [
     id: "01",
     digit: "1",
     title: "DEVSHIELD",
-    description: "...",
-    tech: ["..."],
-    images: [],
-    link: "#",
-    github: "#",
+    description: "A secure banking platform that enables reliable financial transactions, emphasizes security and data integrity, and supports scalable cloud deployment.",
+    tech: [
+      "Java",
+      "JavaScript",
+      "React.js",
+      "Spring",
+      "MySQL",
+      "REST APIs",
+      "JWT",
+      "Docker",
+      "GitHub Actions",
+      "AWS",
+      "Postman"
+      ],
+    images: [pic33,pic26,pic31,pic32, pic30,pic27,pic28,pic29],
+    link: "http://devshield.s3-website.us-east-2.amazonaws.com",
+    github: "https://github.com/Quantr10/DevShield-frontend",
   },
 
   {
@@ -76,8 +97,9 @@ const projectData = [
       "Node.js",
       "Express.js",
       "Firebase",
-      "REST API",
-      "Stripe",
+      "REST APIs",
+      "Stripe API",
+      "Netlify",
       "Heroku",
     ],
     images: [pic16, pic10, pic11, pic12, pic13, pic14, pic15],
@@ -102,9 +124,7 @@ const Projects = () => {
   const [isMobile, setIsMobile] = useState(window.innerWidth < 900);
 
   // NEW: separate slide index for each project
-  const [slideIndexes, setSlideIndexes] = useState(
-    projectData.map(() => 0)
-  );
+  const [slideIndexes, setSlideIndexes] = useState(projectData.map(() => 0));
 
   const sectionsRef = useRef([]);
 
@@ -201,9 +221,7 @@ const Projects = () => {
               <div
                 className="slide-track"
                 style={{
-                  transform: `translateX(-${
-                    slideIndexes[i] * 100
-                  }%)`,
+                  transform: `translateX(-${slideIndexes[i] * 100}%)`,
                 }}
               >
                 {p.images.map((img, idx) => (
@@ -227,14 +245,24 @@ const Projects = () => {
             </div>
 
             <div className="links-left">
-              <a href={p.link} target="_blank" className="slide-link" data-hover="LIVE">
+              <a
+                href={p.link}
+                target="_blank"
+                className="slide-link"
+                data-hover="LIVE"
+              >
                 <div className="slide-content">
                   <span className="link-text">LIVE</span>
                   <FiExternalLink className="link-icon" />
                 </div>
               </a>
 
-              <a href={p.github} target="_blank" className="slide-link" data-hover="GITHUB">
+              <a
+                href={p.github}
+                target="_blank"
+                className="slide-link"
+                data-hover="GITHUB"
+              >
                 <div className="slide-content">
                   <span className="link-text">GITHUB</span>
                   <FaGithub className="link-icon" />
@@ -328,18 +356,14 @@ const Projects = () => {
 
               <button
                 className="slider-btn left"
-                onClick={() =>
-                  prevSlide(currentIndex, current.images.length)
-                }
+                onClick={() => prevSlide(currentIndex, current.images.length)}
               >
                 <FaChevronLeft />
               </button>
 
               <button
                 className="slider-btn right"
-                onClick={() =>
-                  nextSlide(currentIndex, current.images.length)
-                }
+                onClick={() => nextSlide(currentIndex, current.images.length)}
               >
                 <FaChevronRight />
               </button>
