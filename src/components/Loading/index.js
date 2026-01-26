@@ -17,7 +17,7 @@ export default function LoadingScreen({ onFinish }) {
     }, 15);
 
     return () => clearInterval(timer);
-  }, []);
+  }, [onFinish]);
 
   return (
     <div className="loading-container">

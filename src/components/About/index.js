@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./index.css";
 import me from "../../assets/me.jpg";
-import { FaLinkedin, FaGithub, FaEnvelope, FaInstagram } from "react-icons/fa";
+import { FaLinkedin, FaGithub, FaEnvelope } from "react-icons/fa";
 
 import { IoDocumentText } from "react-icons/io5";
 
@@ -74,7 +74,7 @@ const About = () => {
             </a>
 
             <a
-              href="https://github.com/Quantr10"
+              href="https://github.com/quantr10"
               target="_blank"
               rel="noreferrer"
               className="slide-link"
