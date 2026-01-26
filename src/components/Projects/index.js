@@ -33,7 +33,10 @@ import pic30 from "../../assets/30.png";
 import pic31 from "../../assets/31.png";
 import pic32 from "../../assets/32.png";
 import pic33 from "../../assets/33.png";
-
+import pic34 from "../../assets/34.png";
+import pic35 from "../../assets/35.png";
+import pic36 from "../../assets/36.png";
+import pic37 from "../../assets/37.png";
 
 import { FiExternalLink } from "react-icons/fi";
 import { FaGithub } from "react-icons/fa";
@@ -60,7 +63,7 @@ const projectData = [
       ],
     images: [pic33,pic26,pic31,pic32, pic30,pic27,pic28,pic29],
     link: "http://devshield.s3-website.us-east-2.amazonaws.com",
-    github: "https://github.com/Quantr10/DevShield-frontend",
+    github: "https://github.com/quantr10/DevShield-frontend",
   },
 
   {
@@ -72,23 +75,11 @@ const projectData = [
     tech: ["Flutter", "Firebase", "OpenAI API", "Google APIs"],
     images: [pic25, pic24, pic18, pic17, pic19, pic20, pic21, pic22, pic23],
     link: "#",
-    github: "https://github.com/Quantr10/ItinerMe",
+    github: "https://github.com/quantr10/ItinerMe",
   },
   {
     id: "03",
     digit: "3",
-    title: "PAWRIDES",
-    description:
-      "A real-time ride-booking platform designed for the DePauw University community, offering live ride tracking, trip history management, and secure user authentication for a smooth and reliable campus transportation experience.",
-    tech: ["HTML/CSS", "JavaScript", "React.js", "Firebase", "Vercel"],
-    images: [pic1, pic2, pic3, pic8, pic4],
-    link: "https://pawrides.vercel.app/homepage/index.html#",
-    github: "https://github.com/Quantr10/Pawrides",
-  },
-
-  {
-    id: "04",
-    digit: "4",
     title: "ECOXCHANGE",
     description:
       "A campus-focused platform designed to make sustainable living easier by helping DePauw students buy and sell secondhand items within a trusted community. EcoXchange encourages reuse, reduces waste, and makes everyday essentials more affordable.",
@@ -104,19 +95,31 @@ const projectData = [
     ],
     images: [pic16, pic10, pic11, pic12, pic13, pic14, pic15],
     link: "#",
-    github: "https://github.com/Quantr10/EcoXchange",
+    github: "https://github.com/quantr10/EcoXchange",
+  },
+  {
+    id: "04",
+    digit: "4",
+    title: "BIZZUP",
+    description:
+      "A centralized web platform connecting users with local business combo deals through interactive location-based discovery, QR-code redemption, and a gamified rewards system to increase local business engagement and visibility.",
+    tech: ["JavaScript", "React.js", "Firebase", "Google Maps API", "TailwindCSS","Vercel"],
+    images: [pic5, pic6, pic7, pic34, pic35, pic36, pic37],
+    link: "https://bizzup.vercel.app/",
+    github: "https://github.com/quantr10/BizzUp",
   },
   {
     id: "05",
     digit: "5",
-    title: "OUROBORUS",
+    title: "PAWRIDES",
     description:
-      "A modern take on the classic Snake game, built with improved visuals, smoother movement, and evolving challenges. Features dynamic obstacles, power-ups, and progressive levels for a more engaging gameplay experience.",
-    tech: ["C++", "Raylib"],
-    images: [pic5, pic6, pic7],
-    link: "#",
-    github: "https://github.com/Quantr10/Ouroborus",
+      "A real-time ride-booking platform designed for the DePauw University community, offering live ride tracking, trip history management, and secure user authentication for a smooth and reliable campus transportation experience.",
+    tech: ["HTML/CSS", "JavaScript", "React.js", "Firebase", "Bootstrap", "Vercel"],
+    images: [pic1, pic2, pic3, pic8, pic4],
+    link: "https://pawrides.vercel.app/homepage/index.html#",
+    github: "https://github.com/quantr10/Pawrides",
   },
+
 ];
 
 const Projects = () => {
