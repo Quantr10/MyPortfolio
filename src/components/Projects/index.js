@@ -47,7 +47,8 @@ const projectData = [
     id: "01",
     digit: "1",
     title: "DEVSHIELD",
-    description: "A secure banking platform that enables reliable financial transactions, emphasizes security and data integrity, and supports scalable cloud deployment.",
+    description:
+      "A secure banking platform that enables reliable financial transactions, emphasizes security and data integrity, and supports scalable cloud deployment.",
     tech: [
       "Java",
       "JavaScript",
@@ -59,9 +60,9 @@ const projectData = [
       "Docker",
       "GitHub Actions",
       "AWS",
-      "Postman"
-      ],
-    images: [pic33,pic26,pic31,pic32, pic30,pic27,pic28,pic29],
+      "Postman",
+    ],
+    images: [pic33, pic26, pic31, pic32, pic30, pic27, pic28, pic29],
     link: "http://devshield.s3-website.us-east-2.amazonaws.com",
     github: "https://github.com/quantr10/DevShield-frontend",
   },
@@ -103,7 +104,14 @@ const projectData = [
     title: "BIZZUP",
     description:
       "A centralized web platform connecting users with local business combo deals through interactive location-based discovery, QR-code redemption, and a gamified rewards system to increase local business engagement and visibility.",
-    tech: ["JavaScript", "React.js", "Firebase", "Google Maps API", "TailwindCSS","Vercel"],
+    tech: [
+      "JavaScript",
+      "React.js",
+      "Firebase",
+      "Google Maps API",
+      "TailwindCSS",
+      "Vercel",
+    ],
     images: [pic5, pic6, pic7, pic34, pic35, pic36, pic37],
     link: "https://bizzup.vercel.app/",
     github: "https://github.com/quantr10/BizzUp",
@@ -114,12 +122,18 @@ const projectData = [
     title: "PAWRIDES",
     description:
       "A real-time ride-booking platform designed for the DePauw University community, offering live ride tracking, trip history management, and secure user authentication for a smooth and reliable campus transportation experience.",
-    tech: ["HTML/CSS", "JavaScript", "React.js", "Firebase", "Bootstrap", "Vercel"],
+    tech: [
+      "HTML/CSS",
+      "JavaScript",
+      "React.js",
+      "Firebase",
+      "Bootstrap",
+      "Vercel",
+    ],
     images: [pic1, pic2, pic3, pic8, pic4],
     link: "https://pawrides.vercel.app/homepage/index.html#",
     github: "https://github.com/quantr10/Pawrides",
   },
-
 ];
 
 const Projects = () => {
@@ -251,6 +265,7 @@ const Projects = () => {
               <a
                 href={p.link}
                 target="_blank"
+                rel="noreferrer noopener"
                 className="slide-link"
                 data-hover="LIVE"
               >
@@ -263,6 +278,7 @@ const Projects = () => {
               <a
                 href={p.github}
                 target="_blank"
+                rel="noreferrer noopener"
                 className="slide-link"
                 data-hover="GITHUB"
               >
@@ -310,6 +326,7 @@ const Projects = () => {
             <a
               href={current.link}
               target="_blank"
+              rel="noreferrer noopener"
               className="slide-link"
               data-hover="LIVE"
             >
@@ -322,6 +339,7 @@ const Projects = () => {
             <a
               href={current.github}
               target="_blank"
+              rel="noreferrer noopener"
               className="slide-link"
               data-hover="GITHUB"
             >

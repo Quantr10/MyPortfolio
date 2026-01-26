@@ -22,7 +22,7 @@ const NavBar = () => {
       </div>
 
       <div className={`navbar-links ${isOpen ? "active" : ""}`}>
-        <a href="#" data-hover="home" onClick={closeMenu}>
+        <a href="/" data-hover="home" onClick={closeMenu}>
           <span className="nav-text">home</span>
         </a>
         <a href="#about" data-hover="about" onClick={closeMenu}>

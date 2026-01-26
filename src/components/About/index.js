@@ -5,8 +5,9 @@ import { FaLinkedin, FaGithub, FaEnvelope } from "react-icons/fa";
 
 import { IoDocumentText } from "react-icons/io5";
 
+const phrases = ["QUAN TRAN", "a CS MAJOR", "a SOFTWARE ENGINEER"];
+
 const About = () => {
-  const phrases = ["QUAN TRAN", "a CS MAJOR", "a SOFTWARE ENGINEER"];
   const [currentPhraseIndex, setCurrentPhraseIndex] = useState(0);
   const [displayedText, setDisplayedText] = useState("");
   const [charIndex, setCharIndex] = useState(0);
